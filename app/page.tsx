@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { SemanticGraph } from "@/components/sections/SemanticGraph";
-import { DeveloperIntelligence } from "@/components/sections/DeveloperIntelligence";
+import { GraphBenchmarks } from "@/components/sections/GraphBenchmarks";
 import { ContextEngine } from "@/components/sections/ContextEngine";
 import { Architecture } from "@/components/sections/Architecture";
 import { Performance } from "@/components/sections/Performance";
@@ -18,7 +18,7 @@ export default function Home() {
       <Hero />
       <About />
       <SemanticGraph />
-      <DeveloperIntelligence />
+      <GraphBenchmarks />
       <ContextEngine />
       <Architecture />
       <Performance />

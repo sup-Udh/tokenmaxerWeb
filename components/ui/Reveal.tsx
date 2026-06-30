@@ -30,7 +30,7 @@ export function Reveal({ children, className, delay = 0, direction = "up" }: Rev
         y: 0,
         x: 0,
       }}
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "0px" }}
       transition={{
         duration: 0.8,
         delay: delay,

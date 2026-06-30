@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ArrowDown } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 
@@ -38,12 +37,7 @@ export function Hero() {
         { opacity: 1, y: 0, duration: 1 },
         "-=0.8"
       )
-      .fromTo(
-        ".hero-scroll",
-        { opacity: 0 },
-        { opacity: 1, duration: 1 },
-        "-=0.5"
-      );
+      ;
   }, { scope: container });
 
   return (
@@ -87,10 +81,6 @@ export function Hero() {
         </div>
       </Container>
 
-      {/* Tiny Downward Arrow */}
-      <div className="hero-scroll absolute bottom-12 left-1/2 -translate-x-1/2 opacity-0">
-        <ArrowDown className="w-5 h-5 text-white/40 animate-bounce" />
-      </div>
     </section>
   );
 }
