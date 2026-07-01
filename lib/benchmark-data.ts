@@ -25,12 +25,12 @@ export const TOKEN_CONSUMPTION = {
 };
 
 export const CATEGORY_COMPARISON = [
-  { category: "Orientation", withCodeBroker: 1200, withoutCodeBroker: 4500 },
-  { category: "Architecture", withCodeBroker: 2100, withoutCodeBroker: 12000 },
-  { category: "Graph Analysis", withCodeBroker: 1500, withoutCodeBroker: 0 }, // Traditional doesn't do graph analysis usually
-  { category: "Search", withCodeBroker: 800, withoutCodeBroker: 6000 },
-  { category: "Implementation", withCodeBroker: 5000, withoutCodeBroker: 18000 },
-  { category: "Total", withCodeBroker: 10600, withoutCodeBroker: 40500 },
+  { category: "Repository Orientation", withCodeBroker: 3400, withoutCodeBroker: 11000 },
+  { category: "Architecture Discovery", withCodeBroker: 5900, withoutCodeBroker: 19000 },
+  { category: "Dependency Analysis", withCodeBroker: 4200, withoutCodeBroker: 25000 },
+  { category: "Context Retrieval", withCodeBroker: 2200, withoutCodeBroker: 8000 },
+  { category: "Code Implementation", withCodeBroker: 14300, withoutCodeBroker: 16000 },
+  { category: "Total Tokens", withCodeBroker: 30000, withoutCodeBroker: 79000 },
 ];
 
 export const EFFICIENCY_PHASES = [

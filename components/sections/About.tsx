@@ -123,11 +123,13 @@ export function About() {
             </div>
 
             {/* Connecting Lines (Simulated with absolute divs) */}
-            <div className="absolute inset-0 flex items-center justify-center">
-               <div className="graph-line absolute w-[40%] h-[1px] bg-white/20 origin-left rotate-45" />
-               <div className="graph-line absolute w-[30%] h-[1px] bg-white/20 origin-left -rotate-12" />
-               <div className="graph-line absolute w-[45%] h-[1px] bg-white/20 origin-left rotate-[135deg]" />
-               <div className="graph-line absolute w-[35%] h-[1px] bg-white/20 origin-left -rotate-[160deg]" />
+            <div className="absolute inset-0">
+               <div className="graph-line absolute w-[40%] h-[1px] bg-white/20 origin-left rotate-45 left-1/2 top-1/2" />
+               <div className="graph-line absolute w-[30%] h-[1px] bg-white/20 origin-left -rotate-12 left-1/2 top-1/2" />
+               <div className="graph-line absolute w-[45%] h-[1px] bg-white/20 origin-left rotate-[135deg] left-1/2 top-1/2" />
+               <div className="graph-line absolute w-[35%] h-[1px] bg-white/20 origin-left -rotate-[160deg] left-1/2 top-1/2" />
+               <div className="graph-line absolute w-[38%] h-[1px] bg-white/20 origin-left -rotate-[105deg] left-1/2 top-1/2" />
+               <div className="graph-line absolute w-[42%] h-[1px] bg-white/20 origin-left -rotate-[60deg] left-1/2 top-1/2" />
             </div>
 
             {/* Labels & Nodes */}
@@ -201,17 +203,7 @@ export function About() {
                 </div>
               </div>
 
-              {/* Footer */}
-              <div className="panel-reveal p-6 border-t border-white/5 bg-white/[0.01] flex items-center justify-between">
-                <div className="flex flex-col gap-1">
-                  <span className="text-white/40 text-xs font-mono uppercase tracking-widest">Graph Confidence</span>
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-white font-medium text-sm">100% Deterministic</span>
-                  </div>
-                </div>
-                <span className="text-white/30 text-xs font-mono">No hallucinations</span>
-              </div>
+
             </div>
           </div>
         </div>

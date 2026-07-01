@@ -67,7 +67,7 @@ export function Hero() {
 
         {/* Subheadline */}
         <p className="hero-subtitle text-xl md:text-2xl text-white/60 max-w-3xl font-light mb-16 opacity-0">
-          CodeBroker builds a deterministic semantic understanding of your repository—giving AI agents the exact context they need instead of making them guess.
+          CodeBroker builds a deterministic semantic understanding of your repository giving AI agents the exact context they need instead of making them guess.
         </p>
 
         {/* Buttons */}

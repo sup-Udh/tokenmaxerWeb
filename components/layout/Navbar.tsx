@@ -6,11 +6,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 
 const navLinks = [
-  { name: "Product", href: "#product" },
-  { name: "Architecture", href: "#architecture" },
-  { name: "Features", href: "#features" },
   { name: "Documentation", href: "#docs" },
-  { name: "GitHub", href: "https://github.com/codebroker" },
 ];
 
 export function Navbar() {
@@ -40,21 +36,19 @@ export function Navbar() {
           </Link>
         </div>
 
-        {/* Center: Links */}
-        <nav className="hidden md:flex flex-1 justify-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-white/70 hover:text-white transition-colors"
-            >
-              {link.name}
-            </Link>
-          ))}
-        </nav>
-
-        {/* Right: CTA */}
-        <div className="flex-1 flex justify-end">
+        {/* Right: Links & CTA */}
+        <div className="flex-1 flex justify-end items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium text-white/70 hover:text-white transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
           <Button size={scrolled ? "sm" : "default"} className="transition-all duration-500">
             Get Started
           </Button>

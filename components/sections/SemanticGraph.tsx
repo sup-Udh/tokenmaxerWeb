@@ -1,91 +1,77 @@
 "use client";
 
-import { useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import { useState } from "react";
 import { Container } from "@/components/ui/Container";
-import { SectionTitle } from "@/components/ui/SectionTitle";
-import { SectionNumber } from "@/components/ui/SectionNumber";
-
-gsap.registerPlugin(ScrollTrigger, useGSAP);
+import { Reveal } from "@/components/ui/Reveal";
+import { PIPELINE_STAGES } from "@/components/ui/semantic-graph/data";
+import { AnimatedBackground } from "@/components/ui/semantic-graph/AnimatedBackground";
+import { PipelineStage } from "@/components/ui/semantic-graph/PipelineStage";
+import { PipelineConnector } from "@/components/ui/semantic-graph/PipelineConnector";
+import { StageDetails } from "@/components/ui/semantic-graph/StageDetails";
+import { MetricsGrid } from "@/components/ui/semantic-graph/MetricsGrid";
 
 export function SemanticGraph() {
-  const container = useRef<HTMLDivElement>(null);
-  const graphRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    if (!graphRef.current) return;
-    
-    const steps = gsap.utils.toArray(".graph-step");
-    
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: container.current,
-        start: "top center",
-        end: "bottom center",
-        scrub: 1,
-      }
-    });
-
-    steps.forEach((step: any, i) => {
-      tl.fromTo(step, 
-        { opacity: 0, y: 50, scale: 0.9 },
-        { opacity: 1, y: 0, scale: 1, duration: 1 },
-        i * 0.5
-      );
-      
-      // Keep visible for a bit
-      tl.to(step, { opacity: 1, duration: 0.5 });
-      
-      // Fade out if not last
-      if (i !== steps.length - 1) {
-        tl.to(step, { opacity: 0.2, duration: 0.5 });
-      }
-    });
-
-  }, { scope: container });
-
-  const pipeline = [
-    "Files",
-    "Symbols",
-    "Relationships",
-    "Graph",
-    "Retrieval",
-    "Context"
-  ];
+  const [activeStage, setActiveStage] = useState(0);
 
   return (
-    <section ref={container} id="features" className="py-32 bg-white/[0.01] border-y border-white/5">
+    <section id="semantic-graph" className="py-32 relative bg-[#050505]">
       <Container>
-        <SectionNumber number="02" />
-        <SectionTitle 
-          title="Semantic Graph" 
-          subtitle="A deterministic representation of your entire codebase."
-          className="mb-24"
-        />
-
-        <div ref={graphRef} className="relative aspect-video rounded-3xl border border-white/10 bg-black overflow-hidden flex flex-col md:flex-row items-center justify-center p-8 md:p-16 gap-4 md:gap-8">
-          {/* Grid Background */}
-          <div className="absolute inset-0 bg-grid opacity-20" />
-          
-          {pipeline.map((step, index) => (
-            <div key={step} className="graph-step flex flex-col items-center gap-4 relative z-10 w-full max-w-[150px]">
-              <div className="w-16 h-16 md:w-24 md:h-24 rounded-2xl border border-white/20 bg-white/5 flex items-center justify-center backdrop-blur-sm">
-                <span className="text-white/40 text-xs md:text-sm font-mono tracking-wider">{index + 1}</span>
-              </div>
-              <span className="text-sm md:text-base font-medium tracking-wide text-white/80">{step}</span>
-              
-              {/* Connector Line (hide on mobile or change direction) */}
-              {index !== pipeline.length - 1 && (
-                <>
-                  <div className="hidden md:block absolute top-12 left-[100%] w-8 h-[1px] bg-[var(--color-brand)] opacity-50" />
-                  <div className="block md:hidden w-[1px] h-4 bg-[var(--color-brand)] opacity-50 mt-2" />
-                </>
-              )}
+        {/* Section Header */}
+        <div className="mb-16 flex flex-col items-center text-center max-w-[700px] mx-auto">
+          <Reveal>
+            <div className="mb-6 inline-block text-[var(--color-brand)] font-mono text-sm tracking-[0.3em] uppercase">
+              (03)
             </div>
-          ))}
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-white">
+              Semantic Graph Engine
+            </h2>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="text-xl text-zinc-400 font-light leading-relaxed">
+              Every repository becomes a deterministic knowledge graph. <br className="hidden md:block" />
+              Files, symbols and relationships are connected before AI ever sees your code.
+            </p>
+          </Reveal>
         </div>
+
+        {/* Main Interactive Panel */}
+        <Reveal delay={0.3}>
+          <div className="w-full max-w-[95%] xl:max-w-[90%] mx-auto min-h-[600px] rounded-[32px] border border-[#232323] bg-[#080808] relative overflow-hidden flex flex-col md:flex-row shadow-2xl">
+            <AnimatedBackground />
+            
+            {/* Left Side: Horizontal Pipeline */}
+            <div className="w-full md:w-[55%] lg:w-[60%] p-8 md:p-12 flex items-center justify-center relative z-10 border-b md:border-b-0 md:border-r border-[#232323]">
+              <div className="flex flex-row items-start justify-center w-full max-w-3xl">
+                {PIPELINE_STAGES.map((stage, index) => (
+                  <div key={stage.id} className="flex flex-row items-start w-full">
+                    <PipelineStage 
+                      data={stage} 
+                      index={index} 
+                      isActive={activeStage === index} 
+                      onHover={() => setActiveStage(index)} 
+                    />
+                    {index < PIPELINE_STAGES.length - 1 && (
+                      <PipelineConnector 
+                        isActive={activeStage === index}
+                        isPast={activeStage > index}
+                      />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Side: Stage Details */}
+            <div className="w-full md:w-[45%] lg:w-[40%] p-8 md:p-12 relative z-10 flex items-center bg-black/20 backdrop-blur-sm">
+              <StageDetails data={PIPELINE_STAGES[activeStage]} />
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Bottom Metrics */}
+        <MetricsGrid />
       </Container>
     </section>
   );
