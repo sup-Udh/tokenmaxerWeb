@@ -41,7 +41,7 @@ export function GraphBenchmarks() {
         <div className="flex flex-col items-center text-center mb-24">
           <Reveal>
             <h2 className="text-7xl md:text-[8rem] font-semibold tracking-tighter leading-[1.1] mb-6">
-              62% <br />
+              68% <br />
               <span className="text-white/30 text-5xl md:text-7xl">Token Reduction</span>
             </h2>
           </Reveal>
@@ -59,11 +59,11 @@ export function GraphBenchmarks() {
         <Reveal delay={0.3}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:divide-x divide-white/10 border-y border-white/10 py-12 mb-24">
             <div className="flex flex-col gap-2 text-center pb-8 md:pb-0 border-b border-white/10 md:border-0">
-              <span className="text-4xl md:text-5xl font-light">62%</span>
+              <span className="text-4xl md:text-5xl font-light">68%</span>
               <span className="text-xs uppercase tracking-widest text-white/50 font-mono">Token Reduction</span>
             </div>
             <div className="flex flex-col gap-2 text-center pb-8 md:pb-0 border-b border-white/10 md:border-0">
-              <span className="text-4xl md:text-5xl font-light">2.6×</span>
+              <span className="text-4xl md:text-5xl font-light">3×</span>
               <span className="text-xs uppercase tracking-widest text-white/50 font-mono">Less Context</span>
             </div>
             <div className="flex flex-col gap-2 text-center">

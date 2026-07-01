@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 
 const navLinks = [
-  { name: "Documentation", href: "#docs" },
+  { name: "Documentation", href: "/docs" },
 ];
 
 export function Navbar() {
