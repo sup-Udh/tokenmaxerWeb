@@ -14,35 +14,6 @@ const navigation = [
       { href: "/docs/quick-start", label: "Quick Start" },
     ],
   },
-  {
-    title: "Concepts",
-    links: [
-      { href: "/docs/core-concepts", label: "Core Concepts" },
-      { href: "/docs/architecture", label: "Architecture" },
-      { href: "/docs/semantic-graph", label: "Semantic Graph" },
-      { href: "/docs/project-intelligence", label: "Project Intelligence" },
-      { href: "/docs/graph-retrieval", label: "Graph Retrieval" },
-      { href: "/docs/context-capsules", label: "Context Capsules" },
-    ],
-  },
-  {
-    title: "Tools",
-    links: [
-      { href: "/docs/cli", label: "CLI" },
-      { href: "/docs/vscode-extension", label: "VS Code Extension" },
-    ],
-  },
-  {
-    title: "Reference",
-    links: [
-      { href: "/docs/commands", label: "Commands" },
-      { href: "/docs/configuration", label: "Configuration" },
-      { href: "/docs/examples", label: "Examples" },
-      { href: "/docs/benchmarks", label: "Benchmarks" },
-      { href: "/docs/faq", label: "FAQ" },
-      { href: "/docs/roadmap", label: "Roadmap" },
-    ],
-  },
 ];
 
 export function SidebarNavigation() {
