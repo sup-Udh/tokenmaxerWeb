@@ -69,6 +69,7 @@ export function Hero() {
       );
   }, { scope: container });
 
+
   return (
     <section
       ref={container}

@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { GitHubIcon } from "@/components/ui/harness-icons";
+import { LogoMark } from "@/components/ui/LogoMark";
 
 const navLinks = [
   { name: "Integrations", href: "/#works-with" },
@@ -13,16 +14,6 @@ const navLinks = [
   { name: "Demo", href: "/#demo" },
   { name: "Docs", href: "/docs" },
 ];
-
-/** Orbiting-node logo mark — a tiny live graph. */
-function LogoMark() {
-  return (
-    <span className="relative flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/[0.03]">
-      <span className="h-2 w-2 rounded-full bg-[var(--color-brand)] shadow-[0_0_10px_rgba(255,90,31,0.9)]" />
-      <span className="absolute h-1 w-1 rounded-full bg-white/60 animate-orbit" />
-    </span>
-  );
-}
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
