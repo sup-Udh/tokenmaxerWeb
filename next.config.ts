@@ -12,8 +12,8 @@ const nextConfig: NextConfig = {
         destination: 'https://pub-aa0624d820a7465aa2d7388f8ad39d1b.r2.dev/install.ps1',
       },
       {
-        source: '/codebroker-:file*',
-        destination: 'https://pub-aa0624d820a7465aa2d7388f8ad39d1b.r2.dev/codebroker-:file*',
+        source: '/codebroker-:file',
+        destination: 'https://pub-aa0624d820a7465aa2d7388f8ad39d1b.r2.dev/codebroker-:file',
       },
     ];
   },
