@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CodeBroker | The Semantic Intelligence Layer for AI Coding",
-  description: "CodeBroker builds a deterministic semantic understanding of your repository—giving AI agents the exact context they need instead of making them guess.",
+  title: "CodeBroker | The agent that lives in your codebase",
+  description:
+    "CodeBroker is an open-source MCP server that indexes your repository and hands AI coding tools like Claude Code, Cursor and Antigravity the exact files and context they need.",
 };
 
 export default function RootLayout({
