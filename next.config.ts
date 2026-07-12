@@ -1,7 +1,22 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async rewrites() {
+    return [
+      {
+        source: '/install.sh',
+        destination: 'https://pub-aa0624d820a7465aa2d7388f8ad39d1b.r2.dev/install.sh',
+      },
+      {
+        source: '/install.ps1',
+        destination: 'https://pub-aa0624d820a7465aa2d7388f8ad39d1b.r2.dev/install.ps1',
+      },
+      {
+        source: '/codebroker-:file*',
+        destination: 'https://pub-aa0624d820a7465aa2d7388f8ad39d1b.r2.dev/codebroker-:file*',
+      },
+    ];
+  },
 };
 
 export default nextConfig;
