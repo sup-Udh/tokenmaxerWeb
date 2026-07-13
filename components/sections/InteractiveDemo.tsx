@@ -63,9 +63,9 @@ function TerminalScene() {
   const [phase, setPhase] = useState(0);
 
   return (
-    <div className="flex h-full flex-col">
+    <div className="flex flex-col">
       <WindowChrome title="terminal" />
-      <div className="flex-1 p-6 md:p-8 font-mono text-[13px] md:text-sm leading-relaxed overflow-hidden">
+      <div className="flex-1 p-6 md:p-8 font-mono text-[13px] md:text-sm leading-relaxed">
         <div className="flex gap-2 text-white/80">
           <span className="text-[var(--color-brand)]">$</span>
           <TypedText text="codebroker init" onComplete={() => setPhase((p) => Math.max(p, 1))} />
@@ -128,7 +128,7 @@ function ChatScene() {
   const [phase, setPhase] = useState(0);
 
   return (
-    <div className="flex h-full flex-col">
+    <div className="flex flex-col">
       <WindowChrome title="auth/provider.ts — Editor" />
       <div className="flex flex-1 min-h-0">
         {/* Fake file rail */}
@@ -244,9 +244,9 @@ function sparkPath() {
 
 function DashboardScene() {
   return (
-    <div className="flex h-full flex-col">
+    <div className="flex flex-col">
       <WindowChrome title="CodeBroker · Dashboard" />
-      <div className="flex-1 p-5 md:p-7 overflow-hidden">
+      <div className="flex-1 p-5 md:p-7">
         {/* Stat tiles */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
           {STATS.map((stat, i) => (
@@ -413,7 +413,11 @@ export function InteractiveDemo() {
       </div>
 
       {/* Scene window */}
-      <div className="border-shimmer rounded-3xl bg-black shadow-2xl overflow-hidden min-h-[420px] md:min-h-[440px]">
+      <motion.div
+        layout
+        transition={{ layout: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } }}
+        className="border-shimmer rounded-3xl bg-black shadow-2xl overflow-hidden min-h-[420px] md:min-h-[440px]"
+      >
         <AnimatePresence mode="wait">
           {started && (
             <motion.div
@@ -422,7 +426,6 @@ export function InteractiveDemo() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="h-[420px] md:h-[440px]"
             >
               {(() => {
                 const Scene = STEPS[active].Scene;
@@ -431,7 +434,7 @@ export function InteractiveDemo() {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

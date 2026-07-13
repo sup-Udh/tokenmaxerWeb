@@ -5,13 +5,28 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-const navigation = [
+export const navigation = [
   {
     title: "Overview",
     links: [
       { href: "/docs", label: "Getting Started" },
       { href: "/docs/installation", label: "Installation" },
       { href: "/docs/quick-start", label: "Quick Start" },
+    ],
+  },
+  {
+    title: "Reference",
+    links: [
+      { href: "/docs/cli", label: "CLI Reference" },
+      { href: "/docs/core-concepts", label: "Core Concepts" },
+      { href: "/docs/architecture", label: "Architecture" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { href: "/docs/examples", label: "Examples" },
+      { href: "/docs/benchmarks", label: "Benchmarks" },
     ],
   },
 ];

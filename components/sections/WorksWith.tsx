@@ -74,7 +74,7 @@ export function WorksWith() {
       {/* Hub line: agents ── MCP ── your repo */}
       <Container className="relative mt-16">
         <Reveal delay={0.1}>
-          <div className="mx-auto flex max-w-3xl items-center justify-center gap-3 md:gap-5 text-xs md:text-sm font-mono text-white/40">
+          <div className="mx-auto hidden sm:flex max-w-3xl items-center justify-center gap-3 md:gap-5 text-xs md:text-sm font-mono text-white/40">
             <span className="whitespace-nowrap">your agent</span>
             <span className="relative h-px flex-1 bg-gradient-to-r from-white/5 via-[var(--color-brand)]/60 to-white/5 overflow-hidden">
               <motion.span

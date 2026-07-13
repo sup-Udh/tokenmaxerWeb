@@ -15,7 +15,7 @@ export function FloatingNotice() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 12, scale: 0.96 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 1 }}
-          className="fixed bottom-5 right-5 z-50 flex max-w-sm items-start gap-3 rounded-2xl border border-white/10 bg-black/80 px-5 py-4 shadow-[0_8px_40px_rgba(0,0,0,0.5)] backdrop-blur-xl"
+          className="fixed bottom-5 left-4 right-4 sm:left-auto sm:right-5 z-50 flex max-w-sm items-start gap-3 rounded-2xl border border-white/10 bg-black/80 px-5 py-4 shadow-[0_8px_40px_rgba(0,0,0,0.5)] backdrop-blur-xl"
         >
           <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-brand)]/10 text-[var(--color-brand)]">
             <Sparkles className="h-4 w-4" />
