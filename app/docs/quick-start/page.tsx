@@ -21,15 +21,17 @@ export default function QuickStartPage() {
             <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-brand)]/10 text-[var(--color-brand)] font-semibold text-sm border border-[var(--color-brand)]/20">
               1
             </div>
-            <h2 id="initialize-repository" className="text-2xl font-semibold text-white">Initialize Repository</h2>
+            <h2 id="go-to-your-project" className="text-2xl font-semibold text-white">Go to Your Project</h2>
           </div>
           <p className="text-white/70 mb-4 pl-12">
-            Navigate to your project folder and initialize the CodeBroker configuration. This creates a `.codebroker.json` file in your root directory.
+            CodeBroker indexes one project at a time, scoped to whatever directory you run it
+            from. <code>cd</code> into the repository you want to index — every command below
+            (<code>init</code>, <code>bind</code>, <code>update</code>) should be run from this
+            same directory unless noted otherwise.
           </p>
           <div className="pl-12">
             <TerminalBlock
-              command="codebroker init"
-              output="✓ Initialized CodeBroker configuration in .codebroker.json"
+              command="cd /path/to/your-project"
             />
           </div>
         </section>
@@ -44,10 +46,35 @@ export default function QuickStartPage() {
             <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-brand)]/10 text-[var(--color-brand)] font-semibold text-sm border border-[var(--color-brand)]/20">
               2
             </div>
+            <h2 id="initialize-repository" className="text-2xl font-semibold text-white">Initialize Repository</h2>
+          </div>
+          <p className="text-white/70 mb-4 pl-12">
+            From inside your project folder, initialize the CodeBroker configuration. This scans
+            the codebase and creates a `.codebroker.json` file in your root directory.
+          </p>
+          <div className="pl-12">
+            <TerminalBlock
+              command="codebroker init"
+              output="✓ Initialized CodeBroker configuration in .codebroker.json"
+            />
+          </div>
+        </section>
+
+        <div className="flex justify-center text-white/20">
+          <ArrowDown className="w-6 h-6" />
+        </div>
+
+        {/* Step 3 */}
+        <section>
+          <div className="flex items-center gap-4 mb-4">
+            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-brand)]/10 text-[var(--color-brand)] font-semibold text-sm border border-[var(--color-brand)]/20">
+              3
+            </div>
             <h2 id="bind" className="text-2xl font-semibold text-white">Bind to Your AI Tools</h2>
           </div>
           <p className="text-white/70 mb-4 pl-12">
-            Run the bind command to instantly connect the current directory to Claude, Gemini, and your other AI coding tools.
+            Still in the same project directory, run the bind command to instantly connect it to
+            Claude, Gemini, and your other AI coding tools.
           </p>
           <div className="pl-12">
             <TerminalBlock
@@ -55,6 +82,31 @@ export default function QuickStartPage() {
               output="✓ Bound CodeBroker to Claude
 ✓ Bound CodeBroker to Gemini
 Ready — your AI tools can now query this repository's graph"
+            />
+          </div>
+        </section>
+
+        <div className="flex justify-center text-white/20">
+          <ArrowDown className="w-6 h-6" />
+        </div>
+
+        {/* Step 4 */}
+        <section>
+          <div className="flex items-center gap-4 mb-4">
+            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-brand)]/10 text-[var(--color-brand)] font-semibold text-sm border border-[var(--color-brand)]/20">
+              4
+            </div>
+            <h2 id="stay-updated" className="text-2xl font-semibold text-white">Keep the CLI Updated</h2>
+          </div>
+          <p className="text-white/70 mb-4 pl-12">
+            CodeBroker ships new releases often. Run <code>update</code> any time — from any
+            directory, since it updates the CLI binary itself, not your project&apos;s index — to
+            pull the latest version.
+          </p>
+          <div className="pl-12">
+            <TerminalBlock
+              command="codebroker update"
+              output="✓ Already on the latest version (v0.x.x)"
             />
           </div>
         </section>
