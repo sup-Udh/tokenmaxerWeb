@@ -12,8 +12,9 @@ export function DocsFooter() {
         </div>
         <div className="flex flex-col gap-3">
           <h4 className="font-semibold text-white">Legal</h4>
-          <Link href="/license" className="text-sm text-white/50 hover:text-white transition-colors">License</Link>
-          <Link href="/docs/roadmap" className="text-sm text-white/50 hover:text-white transition-colors">Roadmap</Link>
+          <Link href="/legal#terms-of-service" className="text-sm text-white/50 hover:text-white transition-colors">Terms of Service</Link>
+          <Link href="/legal#privacy-policy" className="text-sm text-white/50 hover:text-white transition-colors">Privacy Policy</Link>
+          <Link href="/legal#license" className="text-sm text-white/50 hover:text-white transition-colors">License</Link>
         </div>
       </div>
       <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">

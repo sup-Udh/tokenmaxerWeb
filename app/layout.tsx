@@ -12,10 +12,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "CodeBroker | The agent that lives in your codebase";
+const description =
+  "CodeBroker is an MCP server that indexes your repository and hands AI coding tools like Claude Code, Cursor and Antigravity the exact files and context they need.";
+
 export const metadata: Metadata = {
-  title: "CodeBroker | The agent that lives in your codebase",
-  description:
-    "CodeBroker is an MCP server that indexes your repository and hands AI coding tools like Claude Code, Cursor and Antigravity the exact files and context they need.",
+  metadataBase: new URL("https://www.codebroker.space"),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: "CodeBroker",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({

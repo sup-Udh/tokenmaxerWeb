@@ -10,6 +10,14 @@ const columns = [
       { name: "Demo", href: "/#demo" },
     ],
   },
+  {
+    title: "Legal",
+    links: [
+      { name: "Terms of Service", href: "/legal#terms-of-service" },
+      { name: "Privacy Policy", href: "/legal#privacy-policy" },
+      { name: "License", href: "/legal#license" },
+    ],
+  },
 ];
 
 export function Footer() {
@@ -21,7 +29,7 @@ export function Footer() {
       <Container className="relative py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           {/* Brand */}
-          <div className="md:col-span-8">
+          <div className="md:col-span-6">
             <Link href="/" className="text-2xl font-semibold tracking-tighter">
               CodeBroker
               <span className="text-[var(--color-brand)]">.</span>
@@ -34,7 +42,7 @@ export function Footer() {
 
           {/* Link columns */}
           {columns.map((col) => (
-            <div key={col.title} className="md:col-span-4">
+            <div key={col.title} className="md:col-span-3">
               <h4 className="text-xs font-mono uppercase tracking-widest text-white/35 mb-5">
                 {col.title}
               </h4>
