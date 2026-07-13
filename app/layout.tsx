@@ -17,7 +17,7 @@ const description =
   "CodeBroker is an MCP server that indexes your repository and hands AI coding tools like Claude Code, Cursor and Antigravity the exact files and context they need.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.codebroker.space"),
+  metadataBase: new URL("https://codebroker.space"),
   title,
   description,
   openGraph: {
