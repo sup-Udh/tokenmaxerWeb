@@ -49,12 +49,6 @@ export function Hero() {
         "-=0.8"
       )
       .fromTo(
-        ".hero-install",
-        { opacity: 0, y: 12 },
-        { opacity: 1, y: 0, duration: 0.8 },
-        "-=0.7"
-      )
-      .fromTo(
         ".hero-node",
         { opacity: 0, scale: 0 },
         { opacity: 1, scale: 1, duration: 0.6, stagger: 0.08, ease: "back.out(2)" },
@@ -133,15 +127,6 @@ export function Hero() {
               <ArrowUpRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Button>
           </Link>
-        </div>
-
-        {/* Install one-liner */}
-        <div className="hero-install mt-10 opacity-0">
-          <code className="inline-flex items-center gap-3 rounded-xl border border-white/10 bg-black/60 px-5 py-3 font-mono text-sm text-white/60 backdrop-blur-sm">
-            <span className="text-[var(--color-brand)]">$</span>
-            claude mcp add codebroker
-            <span className="inline-block h-4 w-[2px] bg-[var(--color-brand)] animate-pulse" />
-          </code>
         </div>
       </Container>
 

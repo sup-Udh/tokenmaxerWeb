@@ -75,7 +75,7 @@ export function HowItWorks() {
         </div>
 
         {/* Interactive walkthrough */}
-        <div className="mt-24 md:mt-32">
+        <div id="demo" className="mt-24 md:mt-32 scroll-mt-24">
           <Reveal>
             <div className="flex flex-col items-center text-center mb-12">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs font-mono text-white/40 mb-6">

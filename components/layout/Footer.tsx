@@ -58,6 +58,9 @@ export function Footer() {
           <p className="text-white/30 text-xs font-mono">
             © {new Date().getFullYear()} CodeBroker. All rights reserved.
           </p>
+          <p className="text-white/30 text-xs font-mono flex items-center gap-1.5">
+            Made with <span className="text-[var(--color-brand)]">♥</span> by Udhay
+          </p>
           <p className="text-white/30 text-xs font-mono flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-500/80 animate-pulse-dot" />
             index: up to date

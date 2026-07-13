@@ -25,9 +25,6 @@ export function CTA() {
 
         <Reveal delay={0.15}>
           <div className="border-shimmer inline-flex flex-col items-center gap-6 rounded-3xl bg-black/50 px-8 py-8 md:px-14 md:py-10 backdrop-blur-sm">
-            <code className="font-mono text-sm md:text-base text-white/60">
-              <span className="text-[var(--color-brand)]">$</span> claude mcp add codebroker
-            </code>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/docs/quick-start">
                 <Button
