@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { GitHubIcon } from "@/components/ui/harness-icons";
 
 const columns = [
   {
@@ -9,24 +8,6 @@ const columns = [
       { name: "Integrations", href: "/#works-with" },
       { name: "How it works", href: "/#how-it-works" },
       { name: "Demo", href: "/#demo" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { name: "Documentation", href: "/docs" },
-      { name: "Quick Start", href: "/docs/quick-start" },
-      { name: "Architecture", href: "/docs/architecture" },
-      { name: "CLI Reference", href: "/docs/cli" },
-    ],
-  },
-  {
-    title: "Community",
-    links: [
-      { name: "GitHub", href: "https://github.com/codebroker" },
-      { name: "Discord", href: "#" },
-      { name: "License", href: "#" },
-      { name: "Privacy", href: "#" },
     ],
   },
 ];
@@ -40,29 +21,20 @@ export function Footer() {
       <Container className="relative py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           {/* Brand */}
-          <div className="md:col-span-5">
+          <div className="md:col-span-8">
             <Link href="/" className="text-2xl font-semibold tracking-tighter">
               CodeBroker
               <span className="text-[var(--color-brand)]">.</span>
             </Link>
             <p className="text-white/40 mt-4 text-sm max-w-xs leading-relaxed">
-              An open-source agent that lives in your repository and helps AI
-              coding tools find the right files and context.
+              An agent that lives in your repository and helps AI coding
+              tools find the right files and context.
             </p>
-            <Link
-              href="https://github.com/codebroker"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="mt-6 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/50 transition-all hover:border-[var(--color-brand)]/40 hover:text-[var(--color-brand)]"
-            >
-              <GitHubIcon className="h-4.5 w-4.5" />
-            </Link>
           </div>
 
           {/* Link columns */}
           {columns.map((col) => (
-            <div key={col.title} className="md:col-span-2">
+            <div key={col.title} className="md:col-span-4">
               <h4 className="text-xs font-mono uppercase tracking-widest text-white/35 mb-5">
                 {col.title}
               </h4>

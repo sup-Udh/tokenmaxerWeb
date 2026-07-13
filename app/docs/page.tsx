@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Terminal, AppWindow, Cpu } from "lucide-react";
+import { Terminal, Cpu } from "lucide-react";
 import { FeatureCard } from "@/components/docs/ui/FeatureCard";
 import { Button } from "@/components/ui/Button";
 
@@ -28,18 +28,12 @@ export default function DocsHomePage() {
       </div>
 
       {/* Feature Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FeatureCard
           title="CLI"
           description="Powerful command line interface for indexing and querying repositories."
           icon={Terminal}
           href="/docs/cli"
-        />
-        <FeatureCard
-          title="VS Code Extension"
-          description="Native editor integration with semantic navigation and context retrieval."
-          icon={AppWindow}
-          href="/docs/vscode-extension"
         />
         <FeatureCard
           title="Core Engine"

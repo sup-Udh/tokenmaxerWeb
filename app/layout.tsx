@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "CodeBroker | The agent that lives in your codebase",
   description:
-    "CodeBroker is an open-source MCP server that indexes your repository and hands AI coding tools like Claude Code, Cursor and Antigravity the exact files and context they need.",
+    "CodeBroker is an MCP server that indexes your repository and hands AI coding tools like Claude Code, Cursor and Antigravity the exact files and context they need.",
 };
 
 export default function RootLayout({

@@ -7,7 +7,6 @@ import { useGSAP } from "@gsap/react";
 import { ChevronDown, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { GitHubIcon } from "@/components/ui/harness-icons";
 
 gsap.registerPlugin(useGSAP);
 
@@ -97,7 +96,7 @@ export function Hero() {
         <div className="hero-badge mb-10 opacity-0">
           <span className="inline-flex items-center gap-2.5 rounded-full border border-[var(--color-brand)]/25 bg-[var(--color-brand)]/[0.07] px-5 py-2 text-xs md:text-sm font-mono text-[var(--color-ember)] tracking-wide">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-brand)] animate-pulse-dot" />
-            Open-source MCP server
+            MCP server for your codebase
           </span>
         </div>
 
@@ -132,12 +131,6 @@ export function Hero() {
             >
               Get Started
               <ArrowUpRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Button>
-          </Link>
-          <Link href="https://github.com/codebroker" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="lg" className="px-10 gap-2.5">
-              <GitHubIcon className="h-4 w-4" />
-              GitHub
             </Button>
           </Link>
         </div>

@@ -5,6 +5,7 @@ import { WorksWith } from "@/components/sections/WorksWith";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { ContextEngine } from "@/components/sections/ContextEngine";
 import { CTA } from "@/components/sections/CTA";
+import { FloatingNotice } from "@/components/ui/FloatingNotice";
 
 export default function Home() {
   return (
@@ -18,6 +19,8 @@ export default function Home() {
       <CTA />
 
       <Footer />
+
+      <FloatingNotice />
     </main>
   );
 }

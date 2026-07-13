@@ -7,7 +7,7 @@ export default function QuickStartPage() {
     <div className="flex flex-col">
       <h1 className="text-4xl font-semibold tracking-tight text-white mb-6">Quick Start</h1>
       <p className="text-lg text-white/60 mb-10">
-        Get up and running with CodeBroker in less than 2 minutes. This guide will take you from an unindexed repository to running your first intelligent context query.
+        Get up and running with CodeBroker in under a minute. This guide will take you from an unindexed repository to having CodeBroker bound to your AI tools.
       </p>
 
       <Callout type="info" title="Prerequisites">
@@ -27,9 +27,9 @@ export default function QuickStartPage() {
             Navigate to your project folder and initialize the CodeBroker configuration. This creates a `.codebroker.json` file in your root directory.
           </p>
           <div className="pl-12">
-            <TerminalBlock 
-              command="codebroker init" 
-              output="✓ Initialized CodeBroker configuration in .codebroker.json" 
+            <TerminalBlock
+              command="codebroker init"
+              output="✓ Initialized CodeBroker configuration in .codebroker.json"
             />
           </div>
         </section>
@@ -44,106 +44,24 @@ export default function QuickStartPage() {
             <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-brand)]/10 text-[var(--color-brand)] font-semibold text-sm border border-[var(--color-brand)]/20">
               2
             </div>
-            <h2 id="build-graph" className="text-2xl font-semibold text-white">Build Graph</h2>
+            <h2 id="bind" className="text-2xl font-semibold text-white">Bind to Your AI Tools</h2>
           </div>
           <p className="text-white/70 mb-4 pl-12">
-            Run the index command to parse your repository and build the deterministic semantic graph.
+            Run the bind command to instantly connect the current directory to Claude, Gemini, and your other AI coding tools.
           </p>
           <div className="pl-12">
-            <TerminalBlock 
-              command="codebroker index" 
-              output="[1/4] Parsing files... (1,245 files)
-[2/4] Extracting semantic relationships...
-[3/4] Building relationship graph...
-[4/4] Generating vector embeddings...
-✓ Graph built successfully in 1.4s" 
-            />
-          </div>
-        </section>
-
-        <div className="flex justify-center text-white/20">
-          <ArrowDown className="w-6 h-6" />
-        </div>
-
-        {/* Step 3 */}
-        <section>
-          <div className="flex items-center gap-4 mb-4">
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-brand)]/10 text-[var(--color-brand)] font-semibold text-sm border border-[var(--color-brand)]/20">
-              3
-            </div>
-            <h2 id="validate" className="text-2xl font-semibold text-white">Validate</h2>
-          </div>
-          <p className="text-white/70 mb-4 pl-12">
-            Ensure your graph was built correctly and check the indexing stats.
-          </p>
-          <div className="pl-12">
-            <TerminalBlock 
-              command="codebroker validate" 
-              output="Graph Integrity: 100%
-Nodes: 3,412
-Edges: 12,844
-Entrypoints: 29
-Status: Ready for queries" 
-            />
-          </div>
-        </section>
-
-        <div className="flex justify-center text-white/20">
-          <ArrowDown className="w-6 h-6" />
-        </div>
-
-        {/* Step 4 */}
-        <section>
-          <div className="flex items-center gap-4 mb-4">
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-brand)]/10 text-[var(--color-brand)] font-semibold text-sm border border-[var(--color-brand)]/20">
-              4
-            </div>
-            <h2 id="query" className="text-2xl font-semibold text-white">Query</h2>
-          </div>
-          <p className="text-white/70 mb-4 pl-12">
-            You can now instantly query your codebase for perfect context capsules.
-          </p>
-          <div className="pl-12">
-            <TerminalBlock 
-              command='codebroker query "authentication"' 
-              output="Found 3 relevant entrypoints and 14 related symbols.
-Generated context capsule 'auth_context.md' (3.2k tokens)" 
-            />
-          </div>
-        </section>
-
-        <div className="flex justify-center text-white/20">
-          <ArrowDown className="w-6 h-6" />
-        </div>
-
-        {/* Step 5 */}
-        <section>
-          <div className="flex items-center gap-4 mb-4">
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-brand)]/10 text-[var(--color-brand)] font-semibold text-sm border border-[var(--color-brand)]/20">
-              5
-            </div>
-            <h2 id="launch-mcp-server" className="text-2xl font-semibold text-white">Launch MCP Server</h2>
-          </div>
-          <p className="text-white/70 mb-4 pl-12">
-            Start the Model Context Protocol (MCP) server to allow AI tools like Cursor or Claude to query your graph directly.
-          </p>
-          <div className="pl-12">
-            <TerminalBlock 
-              command="codebroker mcp" 
-              output="Starting CodeBroker MCP Server...
-Listening on stdio
-Available tools:
-- generate_context_capsule
-- impact_analysis
-- architectural_hotspots
-- search_codebase" 
+            <TerminalBlock
+              command="codebroker bind"
+              output="✓ Bound CodeBroker to Claude
+✓ Bound CodeBroker to Gemini
+Ready — your AI tools can now query this repository's graph"
             />
           </div>
         </section>
       </div>
 
       <Callout type="success" title="You're all set!">
-        You have successfully indexed your repository and learned the basic commands. Head over to the <a href="/docs/core-concepts" className="text-green-400 hover:underline">Core Concepts</a> to dive deeper into how the Semantic Graph works.
+        You have successfully initialized your repository and bound it to your AI tools. Head over to the <a href="/docs/core-concepts" className="text-green-400 hover:underline">Core Concepts</a> to dive deeper into how the Semantic Graph works.
       </Callout>
     </div>
   );

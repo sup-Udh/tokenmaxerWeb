@@ -5,7 +5,6 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { GitHubIcon } from "@/components/ui/harness-icons";
 import { LogoMark } from "@/components/ui/LogoMark";
 
 const navLinks = [
@@ -74,16 +73,6 @@ export function Navbar() {
 
         {/* Right side */}
         <div className="flex items-center gap-2">
-          <Link
-            href="https://github.com/codebroker"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="hidden sm:flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/60 transition-all hover:border-white/25 hover:text-white"
-          >
-            <GitHubIcon className="h-4 w-4" />
-          </Link>
-
           <Link
             href="/docs/quick-start"
             className="group hidden sm:inline-flex items-center gap-1.5 rounded-full bg-[var(--color-brand)] px-5 py-2 text-sm font-medium text-black transition-all duration-300 hover:bg-[var(--color-brand-soft)] hover:shadow-[0_0_24px_rgba(255,90,31,0.45)]"
