@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionNumber } from "@/components/ui/SectionNumber";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { Reveal } from "@/components/ui/Reveal";
+import { InteractiveDemo } from "@/components/sections/InteractiveDemo";
 
 const steps = [
   {
@@ -71,6 +72,28 @@ export function HowItWorks() {
               </div>
             </Reveal>
           ))}
+        </div>
+
+        {/* Interactive walkthrough */}
+        <div className="mt-24 md:mt-32">
+          <Reveal>
+            <div className="flex flex-col items-center text-center mb-12">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs font-mono text-white/40 mb-6">
+                <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-brand)] animate-pulse-dot" />
+                Live walkthrough
+              </span>
+              <h3 className="text-3xl md:text-5xl font-semibold tracking-tight max-w-2xl">
+                See it end to end.
+              </h3>
+              <p className="mt-4 text-white/50 max-w-lg font-light">
+                From a cold repo to your AI answering with the right files — watch the whole loop, or click through it yourself.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <InteractiveDemo />
+          </Reveal>
         </div>
       </Container>
     </section>
