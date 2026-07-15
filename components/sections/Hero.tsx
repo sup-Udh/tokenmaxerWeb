@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { ChevronDown, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { CodeGraphCanvas } from "@/components/ui/CodeGraphCanvas";
 
 gsap.registerPlugin(useGSAP);
 
@@ -68,6 +69,11 @@ export function Hero() {
       ref={container}
       className="relative min-h-screen flex flex-col justify-center pt-32 pb-16 overflow-hidden"
     >
+      {/* Live repo graph — nodes drift, edges warm to the cursor, queries pulse */}
+      <div className="absolute inset-0 mask-radial-fade pointer-events-none">
+        <CodeGraphCanvas density={52} intensity={0.9} />
+      </div>
+
       {/* Warm aurora wash */}
       <div className="absolute inset-0 bg-aurora pointer-events-none" />
 

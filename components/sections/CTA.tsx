@@ -3,10 +3,16 @@ import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
+import { CodeGraphCanvas } from "@/components/ui/CodeGraphCanvas";
 
 export function CTA() {
   return (
     <section className="py-40 md:py-48 relative overflow-hidden">
+      {/* The graph, one last time — sparser here so the headline leads */}
+      <div className="absolute inset-0 mask-radial-fade pointer-events-none">
+        <CodeGraphCanvas density={34} intensity={0.7} />
+      </div>
+
       {/* Ember glow rising from below */}
       <div className="pointer-events-none absolute bottom-[-40%] left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-[var(--color-brand)]/[0.09] blur-[140px]" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/[0.02]" />

@@ -1,6 +1,7 @@
 import { TopNavbar } from "@/components/docs/TopNavbar";
 import { SidebarNavigation } from "@/components/docs/SidebarNavigation";
 import { TableOfContents } from "@/components/docs/TableOfContents";
+import { DocsPager } from "@/components/docs/DocsPager";
 import { DocsFooter } from "@/components/docs/DocsFooter";
 
 export default function DocsLayout({
@@ -17,6 +18,7 @@ export default function DocsLayout({
           <div className="prose prose-invert prose-brand max-w-none">
             {children}
           </div>
+          <DocsPager />
           <DocsFooter />
         </main>
         <TableOfContents />

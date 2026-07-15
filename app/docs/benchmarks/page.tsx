@@ -1,3 +1,5 @@
+import { TokenReductionChart } from "@/components/docs/ui/TokenReductionChart";
+
 export default function BenchmarksPage() {
   const stats = [
     { label: "Graph Integrity", value: "100%" },
@@ -24,25 +26,8 @@ export default function BenchmarksPage() {
         ))}
       </div>
 
-      {/* Chart Placeholder */}
       <h2 id="token-reduction" className="text-2xl font-semibold text-white mb-6">Token Reduction</h2>
-      <div className="w-full h-[300px] rounded-xl border border-[#232323] bg-[#0A0A0A] flex flex-col items-center justify-center p-8 text-center mb-12">
-        <div className="flex items-end gap-8 h-40 mb-4 w-full justify-center">
-          {/* Dummy Bar Chart */}
-          <div className="w-16 bg-white/20 rounded-t-md h-full relative group">
-            <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-white/50 text-xs opacity-0 group-hover:opacity-100 transition-opacity">100k</div>
-            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-white/50 text-xs whitespace-nowrap">Raw Files</div>
-          </div>
-          <div className="w-16 bg-white/20 rounded-t-md h-[40%] relative group">
-            <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-white/50 text-xs opacity-0 group-hover:opacity-100 transition-opacity">40k</div>
-            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-white/50 text-xs whitespace-nowrap">Vector Search</div>
-          </div>
-          <div className="w-16 bg-[var(--color-brand)] rounded-t-md h-[15%] relative group">
-            <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-[var(--color-brand)] font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity">15k</div>
-            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-white text-xs whitespace-nowrap">CodeBroker</div>
-          </div>
-        </div>
-      </div>
+      <TokenReductionChart />
     </div>
   );
 }
