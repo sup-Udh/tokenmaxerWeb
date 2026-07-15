@@ -26,7 +26,7 @@ export function CTA() {
         <Reveal delay={0.15}>
           <div className="border-shimmer inline-flex flex-col items-center gap-6 rounded-3xl bg-black/50 px-8 py-8 md:px-14 md:py-10 backdrop-blur-sm">
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/docs/quick-start">
+              <Link href="/docs/installation">
                 <Button
                   size="lg"
                   className="group px-12 bg-[var(--color-brand)] text-black hover:bg-[var(--color-brand-soft)] hover:shadow-[0_0_36px_rgba(255,90,31,0.45)] transition-all duration-300"

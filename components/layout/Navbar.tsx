@@ -74,7 +74,7 @@ export function Navbar() {
         {/* Right side */}
         <div className="flex items-center gap-2">
           <Link
-            href="/docs/quick-start"
+            href="/docs/installation"
             className="group hidden sm:inline-flex items-center gap-1.5 rounded-full bg-[var(--color-brand)] px-5 py-2 text-sm font-medium text-black transition-all duration-300 hover:bg-[var(--color-brand-soft)] hover:shadow-[0_0_24px_rgba(255,90,31,0.45)]"
           >
             Get Started
@@ -119,7 +119,7 @@ export function Navbar() {
               </motion.div>
             ))}
             <Link
-              href="/docs/quick-start"
+              href="/docs/installation"
               onClick={() => setOpen(false)}
               className="mt-2 flex items-center justify-center gap-1.5 rounded-xl bg-[var(--color-brand)] px-4 py-3 text-base font-medium text-black"
             >

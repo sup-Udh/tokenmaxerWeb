@@ -118,7 +118,7 @@ export function Hero() {
 
         {/* Buttons */}
         <div className="hero-actions flex flex-col sm:flex-row gap-4 opacity-0">
-          <Link href="/docs/quick-start">
+          <Link href="/docs/installation">
             <Button
               size="lg"
               className="group px-10 bg-[var(--color-brand)] text-black hover:bg-[var(--color-brand-soft)] hover:shadow-[0_0_36px_rgba(255,90,31,0.4)] transition-all duration-300"

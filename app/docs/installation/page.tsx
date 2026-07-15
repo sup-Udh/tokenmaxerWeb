@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CodeBlock } from "@/components/docs/ui/CodeBlock";
 import { Callout } from "@/components/docs/ui/Callout";
+import { AppleIcon, LinuxIcon, WindowsIcon } from "@/components/ui/platform-icons";
 
 export default function InstallationPage() {
   return (
@@ -17,10 +18,19 @@ export default function InstallationPage() {
         automated — no separate toolchain or configuration required.
       </p>
 
-      <h3 id="macos-linux" className="text-xl font-medium text-white mt-8 mb-4">macOS / Linux</h3>
+      <h3 id="macos-linux" className="flex items-center gap-2.5 text-xl font-medium text-white mt-8 mb-4">
+        <span className="inline-flex items-center gap-1.5 text-white/70">
+          <AppleIcon className="h-5 w-5" />
+          <LinuxIcon className="h-5 w-5" />
+        </span>
+        macOS / Linux
+      </h3>
       <CodeBlock code="curl -fsSL https://www.codebroker.space/install.sh | bash" language="bash" filename="Terminal" />
 
-      <h3 id="windows" className="text-xl font-medium text-white mt-8 mb-4">Windows</h3>
+      <h3 id="windows" className="flex items-center gap-2.5 text-xl font-medium text-white mt-8 mb-4">
+        <WindowsIcon className="h-5 w-5 text-white/70" />
+        Windows
+      </h3>
       <p className="text-white/70 mb-4">Run this in PowerShell:</p>
       <CodeBlock code="irm https://www.codebroker.space/install.ps1 | iex" language="powershell" filename="PowerShell" />
 
