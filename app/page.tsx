@@ -6,7 +6,6 @@ import { HowItWorks } from "@/components/sections/HowItWorks";
 import { ClaudeDemo } from "@/components/sections/ClaudeDemo";
 import { Benchmarks } from "@/components/sections/Benchmarks";
 import { CTA } from "@/components/sections/CTA";
-import { FloatingNotice } from "@/components/ui/FloatingNotice";
 
 export default function Home() {
   return (
@@ -21,8 +20,6 @@ export default function Home() {
       <CTA />
 
       <Footer />
-
-      <FloatingNotice />
     </main>
   );
 }
