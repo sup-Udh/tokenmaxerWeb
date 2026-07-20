@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ChevronDown, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { CodeGraphCanvas } from "@/components/ui/CodeGraphCanvas";
@@ -54,12 +54,6 @@ export function Hero() {
         { opacity: 0, scale: 0 },
         { opacity: 1, scale: 1, duration: 0.6, stagger: 0.08, ease: "back.out(2)" },
         "-=0.9"
-      )
-      .fromTo(
-        ".hero-scroll-cue",
-        { opacity: 0 },
-        { opacity: 1, duration: 1 },
-        "-=0.3"
       );
   }, { scope: container });
 
@@ -135,12 +129,6 @@ export function Hero() {
           </Link>
         </div>
       </Container>
-
-      {/* Scroll cue */}
-      <div className="hero-scroll-cue absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-0">
-        <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/30">Scroll</span>
-        <ChevronDown className="h-4 w-4 text-white/30 animate-bounce" />
-      </div>
     </section>
   );
 }
